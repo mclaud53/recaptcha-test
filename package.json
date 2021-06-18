@@ -1,0 +1,25 @@
+{
+  "name": "recaptcha-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mclaud53/recaptcha-test.git"
+  },
+  "keywords": [
+    "recaptcha"
+  ],
+  "author": "Heorhii Matvieiev <heorhii.matvieiev@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mclaud53/recaptcha-test/issues"
+  },
+  "homepage": "https://github.com/mclaud53/recaptcha-test#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "npm": "^7.18.1"
+  }
+}
