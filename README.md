@@ -1,16 +1,21 @@
-# ReCaptcha test
-The application helps to develop and test an API that has integration with ReCaptcha.
+# reCAPTCHA test
+The application helps to develop and test an API that has integration with reCAPTCHA.
 
 ## Links
 - [Developer's Guide](https://developers.google.com/recaptcha/intro)
-- [ReCaptcha Admin](http://www.google.com/recaptcha/admin)
+- [reCAPTCHA Admin](http://www.google.com/recaptcha/admin)
 
 ## Environment variables
-- *PUBLIC_KEY* - ReCaptcha public key
-- *SECRET_KEY* - ReCaptcha secret key
+- *PUBLIC_KEY* - reCAPTCHA public key
+- *SECRET_KEY* - reCAPTCHA secret key
 - *SERVER_PORT* - Http server port (by default 3000)
 
-For each version of ReCaptcha, needed to retrieve and pass to configuration their combination of the public key and secret key.
+## Supported versions
+- reCAPTCHA V3
+- reCAPTCHA v2 (Checkbox)
+- reCAPTCHA v2 (Invisible)
+
+For each version of reCAPTCHA, needed to retrieve and pass to configuration their combination of the public key and secret key.
 
 ## Usage
 

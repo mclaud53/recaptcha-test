@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 
 app.get('/v2/invisible', (req, res) => {
     res.render('captcha-page', {
-        TITLE: 'Invisible ReCaptcha V2 test application',
+        TITLE: 'Invisible reCAPTCHA V2 test application',
         PUBLIC_KEY,
         CAPTCHA_VERSION: 'v2-invisible'
     })
@@ -26,7 +26,7 @@ app.get('/v2/invisible', (req, res) => {
 
 app.get('/v2/checkbox', (req, res) => {
     res.render('captcha-page', {
-        TITLE: 'ReCaptcha V2 with checkbox test application',
+        TITLE: 'reCAPTCHA V2 with checkbox test application',
         PUBLIC_KEY,
         CAPTCHA_VERSION: 'v2-with-checkbox'
     })
@@ -34,7 +34,7 @@ app.get('/v2/checkbox', (req, res) => {
 
 app.get('/v3', (req, res) => {
     res.render('captcha-page', {
-        TITLE: 'ReCaptcha V3 test application',
+        TITLE: 'reCAPTCHA V3 test application',
         PUBLIC_KEY,
         CAPTCHA_VERSION: 'v3'
     })
