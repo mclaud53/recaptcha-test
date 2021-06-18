@@ -1,4 +1,5 @@
 # ReCaptcha test
+The application helps to develop and test an API that has integration with ReCaptcha.
 
 ## Links
 - [Developer's Guide](https://developers.google.com/recaptcha/intro)

@@ -4,37 +4,45 @@ const hbs = require('express-hbs')
 const app = express()
 const port = 3000
 
-const publicKey = process.env.PUBLIC_KEY
-const secretKey = process.env.SECRET_KEY
+const {PUBLIC_KEY, SECRET_KEY} = process.env
 
-app.engine('hbs', hbs.express4({}))
+app.use(express.static('public'))
+app.engine('hbs', hbs.express4({
+    partialsDir: __dirname + '/views/partials'
+}))
 app.set('view engine', 'hbs')
 app.set('views', __dirname + '/views')
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('main-page')
 })
 
 app.get('/v2/invisible', (req, res) => {
-    res.render('v2-invisible', {
-        publicKey,
+    res.render('captcha-page', {
+        TITLE: 'Invisible ReCaptcha V2 test application',
+        PUBLIC_KEY,
+        CAPTCHA_VERSION: 'v2-invisible'
     })
 })
 
 app.get('/v2/checkbox', (req, res) => {
-    res.render('v2-checkbox', {
-        publicKey,
+    res.render('captcha-page', {
+        TITLE: 'ReCaptcha V2 with checkbox test application',
+        PUBLIC_KEY,
+        CAPTCHA_VERSION: 'v2-with-checkbox'
     })
 })
 
 app.get('/v3', (req, res) => {
-    res.render('v3', {
-        publicKey,
+    res.render('captcha-page', {
+        TITLE: 'ReCaptcha V3 test application',
+        PUBLIC_KEY,
+        CAPTCHA_VERSION: 'v3'
     })
 })
 
-app.get('/validate-proxy', (req, res) => {
-    axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${req.query.response}`)
+app.get('/validate-token', (req, res) => {
+    axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${SECRET_KEY}&response=${req.query.response}`)
     .then(response => {
         res.json(response.data)
     })
