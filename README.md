@@ -6,8 +6,11 @@ The application helps to develop and test an API that has integration with ReCap
 - [ReCaptcha Admin](http://www.google.com/recaptcha/admin)
 
 ## Environment variables
-- *PUBLIC_KEY* 
-- *SECRET_KEY* 
+- *PUBLIC_KEY* - ReCaptcha public key
+- *SECRET_KEY* - ReCaptcha secret key
+- *SERVER_PORT* - Http server port (by default 3000)
+
+For each version of ReCaptcha, needed to retrieve and pass to configuration their combination of the public key and secret key.
 
 ## Usage
 

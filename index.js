@@ -2,9 +2,8 @@ const express = require('express')
 const axios = require('axios')
 const hbs = require('express-hbs')
 const app = express()
-const port = 3000
 
-const {PUBLIC_KEY, SECRET_KEY} = process.env
+const {PUBLIC_KEY, SECRET_KEY, SERVER_PORT = 3000} = process.env
 
 app.use(express.static('public'))
 app.engine('hbs', hbs.express4({
@@ -48,6 +47,6 @@ app.get('/validate-token', (req, res) => {
     })
 })
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+app.listen(SERVER_PORT, () => {
+    console.log(`Example app listening at http://localhost:${SERVER_PORT}`)
 })

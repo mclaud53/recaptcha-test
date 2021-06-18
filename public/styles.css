@@ -185,20 +185,14 @@ body {
     margin: 40px 20px;
 }
 
-.link-on-main-page {
-
-}
-
-.captcha-version-title {
-
+.link-on-main-page,
+.captcha-version-title,
+.server-response {
+    /* empty block */
 }
 
 .captcha-integration-code,
 .captcha-token-form,
 .validate-token-form {
     padding: 0 0 20px 0;
-}
-
-.server-response {
-
 }
